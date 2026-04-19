@@ -74,6 +74,7 @@ module "blog_alb" {
     }
   ]
 
+  vpc_security_group_ids = [aws_security_group.blog.id]
   tags = {
     Environment = "dev"
   }
